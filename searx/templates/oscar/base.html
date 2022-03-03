@@ -76,20 +76,20 @@
     {% endblock %}
 
     </div>
+    <style type="text/css">
+        @media only screen and (max-width: 1500px) {
+            .footer {
+                display: none;
+            }
+        }
+    </style>
     <div class="footer">
-        <div class="container">
-            {% block footer %}
-            {% endblock %}
-            <p class="text-muted">
-                <small>
-                    {{ _('Powered by') }} <a href="{{ brand.DOCS_URL }}">searx</a> - {{ searx_version }} - {{ _('a privacy-respecting, hackable metasearch engine') }}<br/>
-                    <a href="{{ brand.GIT_URL }}">{{ _('Source code') }}</a> |
-                    <a href="{{ brand.ISSUE_URL }}">{{ _('Issue tracker') }}</a> |
-                    <a href="{{ brand.PUBLIC_INSTANCES }}">{{ _('Public instances') }}</a>{% if brand.CONTACT_URL %} |
-                    <a href="{{ brand.CONTACT_URL }}">{{ _('Contact instance maintainer') }}</a>{% endif %}
-                </small>
-            </p>
-        </div>
+    <p>
+        Informativa sulla <span style='font-weight:bold;'>privacy totale</span>: nel presente sito non viene né loggato, né raccolto, né trattato alcun dato degli utenti, né inviato alcun dato degli utenti a terzi.<br />
+        Informativa sulla <span style='font-weight:bold;'>assenza di pubblicità</span>: non mostrarti pubblicità è un modo per rispettarti.<br />
+        Informativa sull'utilizzo dei cookies: questo sito usa solo &quot;cookies tecnici&quot;,
+        secondo la definizione adottata dal Garante della Privacy.
+    </p>
     </div>
     <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
